@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<title>Mr. Robot</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link href='https://fonts.googleapis.com/css?family=Share Tech Mono' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet'>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+  body,h1,h2,h3,h4,h5 {font-family: "Inconsolata", sans-serif}
+
+  /* width */
+  ::-webkit-scrollbar {
+      width: 10px;
+      height: 4px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+      background: black;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+      background: white;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+  }
+
+  button {
+     background:inherit;
+     border:none;
+     padding-bottom:5px;
+     font-size: 18px;
+     cursor: pointer;
+     outline: none;
+     width: 100%;
+  }
+
+
+  .intro{ /* The So header*/
+    color: white;
+
+    font-size: 22px;
+    font-family: sans-serif;
+    margin-left: 80px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  #smile {
+    font-size:300px;
+    margin-left: 35%;
+    color:#fff021;
+    text-shadow: 3px 3px 10px grey;
+  }
+
+  #episodeTwo{
+    max-width:700px;
+    margin-top:0px;
+    padding-top:15px;
+    box-shadow: 0px 24px 28px 0px rgba(200, 200, 200, 0.2), 0px -26px 40px 0px rgba(200, 200, 200, 0.19);
+  }
+  #episodeOne{
+    max-width:700px;
+    margin-top:0px;
+    padding-top:15px;
+    box-shadow: 0px 24px 28px 0px rgba(200, 200, 200, 0.2), 0px -26px 40px 0px rgba(200, 200, 200, 0.19);
+  }
+
+  #artArticle{
+    max-width:700px;
+    margin-top:0px;
+    padding-top:15px;
+    box-shadow: 0px 24px 28px 0px rgba(200, 200, 200, 0.2), 0px -26px 40px 0px rgba(200, 200, 200, 0.19);
+  }
+
+  #artGallery{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top:3%;
+    margin-bottom: 3%;
+  }
+
+  .header{
+    background: black;
+    width: 97%;
+    color: #2075fc;
+    font-size: 60px;
+    font-family: "Share Tech Mono";
+    margin-top: 1px;
+    margin-bottom: 1px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 10px;
+  }
+
+  .headerRed{
+    background: inherit;
+    width: 97%;
+    color: #000000;
+    font-size: 60px;
+    font-family: "Share Tech Mono";
+    margin-top: 1px;
+    margin-bottom: 1px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 10px;
+  }
+
+
+  video{
+    width: 60%;
+    margin-left:20%;
+    margin-right:20%;
+    margin-top:3%;
+    margin-bottom: 3%;
+  }
+
+  .drop {
+    animation: drop 0.15s cubic-bezier(1,1,1,1) forwards;
+  }
+
+  @keyframes drop {
+    0% {
+      transform-origin: center;
+      opacity: 1;
+    }
+
+
+    100% {
+      opacity: 80;
+      transform:
+        translate3d(0, 350px, 500px)
+        rotate3d(0, 0,
+
+           1, 10deg);
+    }
+  }
+
+  h3{
+    padding-top: 0px;
+    padding-bottom: 15px;
+    padding-left: 8px;
+  }
+  p{
+    color: #2075fc;
+    font-size: 22px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  blockquote{
+    border-left: black;
+    margin-left: 0px;
+    padding-left: 0px;
+  }
+
+#chapOne{
+  width: 60%;
+  margin-left:12%;
+  margin-right:5%;
+  margin-top:3%;
+  margin-bottom: 3%;
+}
+</style>
+
+<body class="w3-content" style="max-width:1600px; background-color: black;">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-animate-left w3-text-grey w3-collapse w3-top" style="z-index:3;width:150px;font-weight:bold; background-color: black;" id="mySidebar">
+  <h3 onclick="goBack()" class="w3-left-align"><b>The Dark Pages</b></h3>
+
+  <button class="tablinks" onclick="openCity(event, 'episodeOne')" class="w3-bar-item w3-text-grey w3-button w3-right-align" id="defaultOpen">Episode 1</button><br>
+  <button class="tablinks" onclick="openCity(event, 'episodeTwo')" class="w3-bar-item w3-text-grey w3-button w3-right-align" >Episode 2</button><br>
+  <button class="tablinks" onclick="openCity(event, 'artArticle')" class="w3-bar-item w3-text-grey w3-button w3-right-align" >Art Gallery</button><br>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-black w3-xlarge w3-padding-16">
+  <span class="w3-left-align w3-padding" style="color: white">Dark Pages</span>
+  <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:50px">
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+  <!-- About section -->
+      <div class="w3-content w3-border-right w3-border-white w3-black" style="max-width:700px; " id="episodeOne">
+        <div class="header">
+          <h2 class="header" style="font-family: Inconsolata"> Hello, friend. </h2>
+        </div>
+          <img id="chapOne" src="../other/images/robot_title.jpg" type="video/mp4">
+
+
+        <blockquote>
+          <p>
+            Krista: "What is it about society that disappoints you so much?"
+          </p>
+          <p>
+            "Oh, I don't know. Is it that we collectively thought Steve Jobs was a great man, even when we knew he made billions off the backs of children?
+             Or maybe it's that it feels like all our heroes are counterfeit? The world itself's just one big hoax. Spamming each other with our running commentary
+             of bullshit, masquerading as insight, our social media faking as intimacy. Or is it that we voted for this? Not with our rigged elections, but with our
+             things, our property, our money. I'm not saying anything new. We all know why we do this, not because Hunger Games books makes us happy, but because we
+             wanna be sedated. Because it's painful not to pretend, because we're cowards. Fuck society."</p>
+          <footer style="font-size:16px">The Dark Pages</footer>
+        </blockquote>
+
+
+      </div>
+
+      <div class="w3-content w3-border-right w3-border-white w3-black"  style="max-width:700px; " id="episodeTwo">
+        <div class="header">
+          <h2 class="header" style="color: #0fc424"> Episode 2 </h2>
+        </div>
+        <h1 class="intro" style="color: #0fc424; padding-bottom:500px">Coming Soon...</h1>
+
+      </div>
+
+      <div class="w3-content w3-border-right w3-border-white w3-red"  style="max-width:700px; " id="artArticle">
+        <div class="headerRed">
+          <h2 class="headerRed"> Art Gallery </h2>
+        </div>
+          <img id="artGallery" src="../other/images/robot_art/profile.jpg">
+          <img id="artGallery" src="../other/images/robot_art/darlene_potrait.jpg">
+          <img id="artGallery" src="../other/images/robot_art/tyrel_robot.png">
+          <img id="artGallery" src="../other/images/robot_art/twoface_onehead.jpg">
+          <img id="artGallery" src="../other/images/robot_art/robot_angela.png">
+          <img id="artGallery" src="../other/images/robot_art/paint.jpg">
+          <img id="artGallery" src="../other/images/robot_art/arms_raised.jpg">
+          <img id="artGallery" src="../other/images/robot_art/show.gif">
+
+
+      </div>
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-grey" style="margin-left: 150px">
+    <div class="w3-row-padding">
+      <div class="w3-third">
+        <h3>INFO</h3>
+        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+      </div>
+
+      <div class="w3-third">
+        <h3>BLOG POSTS</h3>
+        <ul class="w3-ul">
+          <li class="w3-padding-16 w3-hover-black">
+            <img src="/w3images/workshop.jpg" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Lorem</span><br>
+            <span>Sed mattis nunc</span>
+          </li>
+          <li class="w3-padding-16 w3-hover-black">
+            <img src="/w3images/gondol.jpg" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Ipsum</span><br>
+            <span>Praes tinci sed</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="w3-third">
+        <h3>POPULAR TAGS</h3>
+        <p>
+          <span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">London</span>
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">IKEA</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">NORWAY</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">DIY</span>
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Baby</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Family</span>
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">News</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Clothing</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Shopping</span>
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Sports</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Games</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="w3-black w3-center w3-padding-24" style="margin-left: 150px">Powered by <a href="../other/videoHtmls/evilCorp.html" style="color:red; text-decoration: none"  title="W3.CSS" target="_blank" class="w3-hover-opacity">E CORP</a></div>
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("w3-content w3-border-right w3-border-white");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+function goBack() {
+    window.history.back();
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
+</script>
+
+</body>
+</html>
