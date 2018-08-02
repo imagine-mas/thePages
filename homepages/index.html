@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<title>Happy Pages</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link href='https://fonts.googleapis.com/css?family=Barrio' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Belgrano' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Amaranth' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Baloo Bhaijaan' rel='stylesheet'>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+  body,h1,h2,h3,h4,h5,p {font-family: "Raleway", sans-serif; cursor: default;}
+
+
+  button {
+     background:inherit;
+     color:inherit;
+     border:none;
+     padding:8px;
+     font-size: 18px;
+     cursor: pointer;
+     outline: none;
+     width: 100%;
+     color: hotpink;
+  }
+  button:hover {
+  background-color: red;
+  color: white;
+  }
+
+  button.active {
+  background-color: hotpink;
+  color: white;
+  }
+
+
+  #smile {
+    font-size:300px;
+    margin-left: 35%;
+    color:#fff021;
+    text-shadow: 3px 3px 10px grey;
+
+  }
+
+
+
+  .drop {
+    animation: drop 0.15s cubic-bezier(1,1,1,1) forwards;
+  }
+  @keyframes drop {
+    0% {
+      transform-origin: center;
+      opacity: 1;
+    }
+
+
+    100% {
+      opacity: 80;
+      transform:
+        translate3d(0, 350px, 500px)
+        rotate3d(0, 0,1, 10deg);
+    }
+  }
+
+</style>
+
+  <body class="w3-white w3-content" style="max-width:1600px">
+
+<!-- Sidebar/menu -->
+  <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar">
+  <a href="happyPages.html" style="text-decoration:none"><h3 class="w3-padding-64 w3-center w3-text-grey"><b><br>Happy<br>Articles</b></h3></a>
+  <button class="tablinks" onclick="openCity(event, 'frontPage')" class="w3-bar-item w3-button" id="defaultOpen"><i class="fa fa-home" style="font-size:21px"></i> &nbsp; Home </button><br>
+  <button class="tablinks" onclick="openCity(event, 'bojack')" class="w3-bar-item w3-button" ><span class="glyphicon glyphicon-knight" style="font-size:21px"></span> &nbsp; Bojack Horseman </button><br>
+  <button class="tablinks" onclick="openCity(event, 'blackMirror')" class="w3-bar-item w3-button"><span class="glyphicon glyphicon-facetime-video" style="font-size:21px"></span> &nbsp; Black Mirror </button><br>
+  <button class="tablinks" onclick="openCity(event, 'robot')" class="w3-bar-item w3-button"><i class="fa fa-facebook-f" style="font-size:21px"></i> &nbsp; Mr. Robot </button><br>
+</nav>
+
+<!-- Top menu on small screens -->
+  <header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
+  <a href="happyPages.html" style="text-decoration:none"><span class="w3-left w3-padding w3-text-grey">Happy Articles</span></a>
+  <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+  <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+  <div class="w3-main" style="margin-left:300px">
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+
+  <!-- Smilie face and content -->
+  <div class="tabcontent" class="w3-row" id="frontPage" style="background: white">
+    <i class="material-icons" onclick="tryFall()" id="smile" style="padding-top:6%;">tag_faces</i>
+    <h1 style="color: yellow; text-align:center;padding-bottom: 500px;font-weight: bold;text-shadow: 3px 3px 50px black;"><a href="darkPages_home.html" style="text-decoration:none; color: yellow; font-weight: bold; text-shadow: 3px 3px 50px black;cursor:default" id="secretLink">Welcome</a>, We're glad you're here.</h1>
+  </div>
+
+  <!-- About section -->
+  <div class="tabcontent" class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="bojack" style="background: white">
+    <div style="height: 70px; background: #91fdff; width:100%"></div>
+    <div style="height: 15px; background: hotpink; width:100%"></div>
+    <div class="w3-content w3-justify" style="max-width:700px">
+
+      <h4 style="color: red; font-size: 48px; padding-top: 30px; font-family: Barrio, sans-serif"><b>Bojack Horseman </b></h4>
+      <img src="../other/images/bj_horsin_around.jpg" alt="Me" class="w3-image w3-padding-32" width="400" height="300">&emsp;&emsp;
+      <img src="../other/images/bj_young.jpeg" alt="Me" class="w3-image w3-padding-32" width="230" height="500">
+
+      <p style="color:red; font-family: Amaranth; font-size:25px; font-weight: lighter">
+        <br>Bojack Horseman was a star in the hit show, Horsin' Around. Horsin' Around was a situation
+        comedy in the 1980s that stayed on air for nine seasons. The show touched the hearts of millions of American
+        families across the US, much like the shows Bojack had as a kid. Now, with the show at rest, Bojack continues
+        making his way in the big Hollywoo surrounded by family and friends.
+      </p>
+      <img src="../other/images/bj_trans_title.png" alt="Me" class="w3-image w3-padding-32" width="400" height="300">
+    </div>
+  </div>
+
+  <div class="tabcontent" class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="blackMirror" style="background: white">
+    <div style="height: 70px; background: linear-gradient(to right, #5821bc, #ff5000); width:100%"></div>
+    <div style="height: 20px; background: #fff4dd; width:100%"></div>
+    <div class="w3-content w3-justify" style="max-width:700px">
+      <h4 style="color: red; font-size: 48px; padding-top: 50px; font-family: Belgrano, sans-serif"><b>Black Mirror</b></h4>
+      <img src="../other/images/bm_sanjun_cartoon.jpg" alt="Me" class="w3-image w3-padding-32" width="400" height="300" style="margin-right:150px; margin-left:100px">
+
+      <p style="color:red; font-family: Amaranth; font-size:25px; font-weight: lighter; padding-bottom: 100px">
+        Looking for a fresh take on technology and demonstrations on how to use them? Then Black Mirror is the
+        show for you! Black Mirror is a British science fiction anthology television series created by Charlie Brooker, with Brooker and Annabel Jones examining
+         modern societies with new technologies. The show was inspired by older anthology shows like The Twilight Zone.
+      </p>
+    </div>
+  </div>
+
+
+  <div class="tabcontent" class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="robot" style="background: white">
+    <div style="height: 70px; background: white; width:100%"><a style="text-decoration: none;"href="../other/videoHtmls/index_eCorpCommericalVideo.html"><p style="padding-top:55px; color:black">Sponsored by E CORP</p></a></div>
+    <div style="height: 15px; background: gold; width:100%"></div>
+    <div class="w3-content w3-justify" style="max-width:700px">
+      <h4 style="color: red; font-size: 48px; padding-top: 50px; font-family: Belgrano, sans-serif"><b>Mr. Robot</b></h4>
+      <img src="../other/images/robot_colorful_episode.jpg" alt="Me" class="w3-image w3-padding-32" width="400" height="300" style="margin-right:150px; margin-left:100px">
+
+      <p style="color:red; font-family: Amaranth; font-size:25px; font-weight: lighter">
+        Elliot Alderson, a cybersecurity engineer in NYC, works at AllSafe, protecting their primary
+        customer, E CORP, from cyber-threats. Elliot's been having a rough time lately in the Big
+        Apple and to make matters more pressing, Allsafe is facing one of its biggests challenges yet. Luckily,
+        Elliot seems like just the man for the job.<br><br><br>
+      </p>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-grey">
+    <div class="w3-row-padding">
+      <div class="w3-third">
+        <h3>INFO</h3>
+        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+      </div>
+
+      <div class="w3-third">
+        <h3>BLOG POSTS</h3>
+        <ul class="w3-ul">
+          <li class="w3-padding-16 w3-hover-black">
+            <img src="/w3images/workshop.jpg" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Lorem</span><br>
+            <span>Sed mattis nunc</span>
+          </li>
+          <li class="w3-padding-16 w3-hover-black">
+            <img src="/w3images/gondol.jpg" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Ipsum</span><br>
+            <span>Praes tinci sed</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="w3-third">
+        <h3>POPULAR TAGS</h3>
+        <p>
+          <span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">London</span>
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">IKEA</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">NORWAY</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">DIY</span>
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Baby</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Family</span>
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">News</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Clothing</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Shopping</span>
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Sports</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Games</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div>
+
+<!-- End page content -->
+</div>
+
+<script>
+  // Script to open and close sidebar
+  function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+      document.getElementById("myOverlay").style.display = "block";
+  }
+
+  function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+      document.getElementById("myOverlay").style.display = "none";
+  }
+
+  // Modal Image Gallery
+  function onClick(element) {
+    document.getElementById("img01").src = element.src;
+    document.getElementById("modal01").style.display = "block";
+    var captionText = document.getElementById("caption");
+    captionText.innerHTML = element.alt;
+  }
+  function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+  }
+
+  var secretLink;
+  var smile;
+  function tryFall(){
+    $(document).click(function (event) {
+        $('i').toggleClass('drop');
+    });
+
+        secretLink = document.getElementById("secretLink");
+        secretLink.style.textShadow = '15px 10px 50px black, -15px -10px 50px black, 15px 10px 50px black, -15px -10px 50px black, 15px 10px 50px black, -15px -10px 50px black, 15px 10px 50px black, -15px -10px 50px black, 15px -10px 50px black, -15px 10px 50px black, 15px -10px 50px black, -15px 10px 50px black, 15px -10px 50px black, -15px 10px 50px black, 15px -10px 50px black, -15px 10px 50px black';
+        secretLink.style.color = 'red';
+        smile = document.getElementById("smile");
+        smile.style.textShadow = '30px 10px 10px red';
+
+    play();
+  }
+
+  function play(){
+         var audio = document.getElementById("audio");
+         audio.play();
+                   }
+
+
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+
+</script>
+
+<audio id="audio" src="../other/images/bm_crackSound.mp4" ></audio>
+</body>
+</html>
