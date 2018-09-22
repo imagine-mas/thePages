@@ -21,13 +21,23 @@
 
 <!-- The Side div -->
 <div class="content">
-  <a href="../other/videoHtmls/darkPages_welcomeVideo.html"><h1>Welcome to Darkness</h1></a>
+  <a href="../other/videoHtmls/darkPages_welcomeVideo.html"><h1>Change Me to Darkness</h1></a>
   <ul>
     <li><strong><a href="../blogs/bj_blog.html">Bojack Horseman</a></strong></li>
     <li><strong><a href="../blogs/robot_blog.html">Mr. Robot</a></strong></li>
     <li><strong><a href="bm_home.html">Black Mirror</a></strong></li>
   </ul>
 </div>
+
+  <script>
+  function play(){
+     var audio = document.getElementById("audio");
+     audio.play();
+   }
+</script>
+
+<!-- Plays the video audio -->
+<embed src="../other/images/darkPages_background.mp4" id="audio" autostart=false width=0 height=0 enablejavascript="true">
 
 
 </body>
