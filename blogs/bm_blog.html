@@ -1,44 +1,39 @@
 <!DOCTYPE html>
 <html>
-<title>Black Mirror Episode Analysis</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <title>Dark Pages</title>
+  <link rel="shortcut icon" type="image/jpg" href="../other/images/black_sq_x.jpg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link href='https://fonts.googleapis.com/css?family=Alfa Slab One' rel='stylesheet'>
 
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
 
 <style>
+/* Colored scrollbar */
+  /* width */
+  ::-webkit-scrollbar { width: 10px; height: 4px; }
+  /* Track */
+  ::-webkit-scrollbar-track { background: black; }
+  /* Handle */
+  ::-webkit-scrollbar-thumb { background: #267699; }
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover { background: #555; }
+
+/*--- Elements ---*/
   body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 
-  /* width */
-  ::-webkit-scrollbar {
-      width: 10px;
-      height: 4px;
-  }
-
-  /* Track */
-  ::-webkit-scrollbar-track {
-      background: black;
-  }
-
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-      background: #267699;
-  }
-
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-      background: #555;
-  }
-
-  button {
+  button
+  {
      background:inherit;
      border:none;
      padding-bottom:5px;
@@ -48,126 +43,151 @@
      width: 100%;
   }
 
-
-  .intro{ /* The So header*/
-    color: white;
-
-    font-size: 22px;
-    font-family: sans-serif;
-    margin-left: 80px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-
-  #smile {
-    font-size:300px;
-    margin-left: 35%;
-    color:#fff021;
-    text-shadow: 3px 3px 10px grey;
-  }
-
-  #episodeOne{ /* the article div */
-    max-width:700px;
-    margin-top:0px;
-    padding-top:15px;
-    box-shadow: 0px 24px 28px 0px rgba(200, 200, 200, 0.2), 0px -26px 40px 0px rgba(200, 200, 200, 0.19);
-  }
-
-  #episodeTwo{ /* the article div */
-    max-width:700px;
-    margin-top:0px;
-    padding-top:15px;
-    box-shadow: 0px 24px 28px 0px rgba(200, 200, 200, 0.2), 0px -26px 40px 0px rgba(200, 200, 200, 0.19);
-  }
-
-  .header{
+/*--- Classes ---*/
+  .titularSections{
     background: #E5E7E9;
     width: 97%;
     color: black;
-    font-size: 22px;
-    font-family: sans-serif;
+    font-size: 41px;
+    font-family: Alfa Slab One;
     margin-top: 1px;
     margin-bottom: 1px;
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding-top: 4px;
+    padding-bottom: 3px;
     margin-left: 10px;
+    padding-left: 100px;
   }
 
-  video{
-    width: 60%;
-    margin-left:20%;
-    margin-right:20%;
+/*--- Ids ---*/
+  /* the pages that are toggled */
+  #pageSections
+  {
+    max-width:700px;
+    margin-top:0px;
+    padding-top:15px;
+    box-shadow: 0px 24px 28px 0px rgba(200, 200, 200, 0.2), 0px -26px 40px 0px rgba(200, 200, 200, 0.19);
+  }
+  /* cartoon title images */
+  #photoLineUp
+  {
+    width: 27%;
+    margin-left: 1.5%;
+    margin-right: 3%;
     margin-top:3%;
     margin-bottom: 3%;
   }
 
-  .drop {
-    animation: drop 0.15s cubic-bezier(1,1,1,1) forwards;
+  #photoLineUp:hover
+  {
+     animation: bounce 0.5s infinite; //other browsers
+     -webkit-animation: bounce 0.5s infinite; //webkit browsers
+     -moz-animation: bounce 0.5s infinite; //firefox
+     -o-animation: bounce 0.5s infinite; //opera
   }
 
-  @keyframes drop {
-    0% {
-      transform-origin: center;
-      opacity: 1;
-    }
-
-    100% {
-      opacity: 80;
-      transform:
-        translate3d(0, 350px, 500px)
-        rotate3d(0, 0,
-
-           1, 10deg);
-    }
+/*--- Action ---*/
+  @-webkit-keyframes bounce
+  {
+    0%,
+    100% { -webkit-transform: translateY(0); }
+    50% { -webkit-transform: translateY(-10px); }
   }
 
-  h3{
-    padding-top: 0px;
-    padding-bottom: 15px;
-    padding-left: 8px;
+  @-moz-keyframes bounce
+  {
+      0%,
+      100% { -moz-transform: translateY(0); }
+      50% { -moz-transform: translateY(-10px); }
+  }
+
+  @-o-keyframes bounce
+  {
+      0%,
+      100% { -o-transform: translateY(0); }
+      50% { -o-transform: translateY(-10px); }
+  }
+
+  @keyframes bounce
+  {
+      0%,
+      100% { transform: translateY(0); }
+      50% { transform: translateY(-10px);
+
+      }
   }
 
 </style>
 
 <body class="w3-content" style="max-width:1600px; background-color: #0f0f0f;">
 
+<!-- Not relevant material -->
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-bar-block w3-animate-left w3-text-grey w3-collapse w3-top" style="z-index:3;width:150px;font-weight:bold; background-color: #0f0f0f;" id="mySidebar">
   <h3 onclick="goBack()" class="w3-left-align"><b>The Dark Pages</b></h3>
-  <button class="tablinks" onclick="openCity(event, 'episodeOne')" class="w3-bar-item w3-text-grey w3-button w3-right-align" >Coming Soon</button><br>
-  <button class="tablinks" onclick="openCity(event, 'episodeOne')" class="w3-bar-item w3-text-grey w3-button w3-right-align" id="defaultOpen">Coming Soon</button><br>
-  <button class="tablinks" onclick="openCity(event, 'episodeOne')" class="w3-bar-item w3-text-grey w3-button w3-right-align" >Coming Soon</button><br>
+  <button class="tablinks" onclick="openCity(event, 'pageSections')" class="w3-bar-item w3-text-grey w3-button w3-right-align" >Coming Soon</button><br>
+  <button class="tablinks" onclick="openCity(event, 'pageSections')" class="w3-bar-item w3-text-grey w3-button w3-right-align" id="defaultOpen">Coming Soon</button><br>
+  <button class="tablinks" onclick="openCity(event, 'pageSections')" class="w3-bar-item w3-text-grey w3-button w3-right-align" >Coming Soon</button><br>
 </nav>
-
 <!-- Top menu on small screens -->
-<header class="w3-container w3-top w3-hide-large w3-black w3-xlarge w3-padding-16">
+<titularSections class="w3-container w3-top w3-hide-large w3-black w3-xlarge w3-padding-16">
   <span class="w3-left-align w3-padding" style="color: white">Dark Pages</span>
   <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
-</header>
-
+</titularSections>
 <!-- Overlay effect when opening sidebar on small screens -->
 <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
+<!-- Relevant material -->
 <!-- !PAGE CONTENT! -->
 <div class="w3-main" style="margin-left:50px">
-  <!-- Push down content on small screens -->
-  <div class="w3-hide-large" style="margin-top:83px"></div>
-  <!-- About section -->
-      <div class="w3-content w3-black w3-border-right w3-border-blue" style="max-width:700px;" id="episodeOne">
-        <div class="header">
-          <h2 class="header"> Black Mirror </h2>
+  <div class="w3-hide-large" style="margin-top:83px"></div> <!-- Push down content on small screens -->
+
+      <!-- The Page: Bouncing title pictures -->
+      <div class="w3-content w3-black w3-border-right w3-border-blue" style="max-width:700px;" id="pageSections">
+        <!-- Title -->
+        <div class="titularSections">
+          <h2 class="titularSections"> Black Mirror </h2>
         </div>
+        <!-- Article -->
         <blockquote style="padding-bottom:600px">
-          <p style="padding-top:100px">This part of the site is currently under construction. Thank you.</p>
+          <p style="padding-top:30px">Season 1</p>
+          <a href="test_bm_blog.html#Season1">
+            <img id="photoLineUp" src="../other/images/bm_cartoons/11.jpg">
+            <img id="photoLineUp" src="../other/images/bm_cartoons/12.jpg">
+            <img id="photoLineUp" src="../other/images/bm_cartoons/13.jpg">
+          </a>
+          <p style="padding-top:30px">Season 2</p>
+          <a href="test_bm_blog.html#Season2">
+            <img id="photoLineUp" src="../other/images/bm_cartoons/21.jpg">
+            <img id="photoLineUp" src="../other/images/bm_cartoons/22.jpg">
+            <img id="photoLineUp" src="../other/images/bm_cartoons/23.jpg">
+            <img id="photoLineUp" src="../other/images/bm_cartoons/24.jpg">
+          </a>
+          <p style="padding-top:30px">Season 3</p>
+          <a href="test_bm_blog.html#Season3">
+            <img id="photoLineUp" src="../other/images/bm_cartoons/31.jpg">
+            <img id="photoLineUp" src="../other/images/bm_cartoons/32.jpeg">
+            <img id="photoLineUp" src="../other/images/bm_cartoons/33.jpg">
+            <img id="photoLineUp" src="../other/images/bm_cartoons/34.jpeg">
+            <img id="photoLineUp" src="../other/images/bm_cartoons/35.jpg">
+            <img id="photoLineUp" src="../other/images/bm_cartoons/36.jpg">
+          </a>
+          <p style="padding-top:30px">Season 4</p>
+          <a href="test_bm_blog.html#Season4">
+            <img id="photoLineUp" src="../other/images/bm_cartoons/41.png">
+            <img id="photoLineUp" src="../other/images/bm_cartoons/42.jpg">
+            <img id="photoLineUp" src="../other/images/bm_cartoons/43.jpg">
+            <img id="photoLineUp" src="../other/images/bm_cartoons/44.jpg">
+            <img id="photoLineUp" src="../other/images/bm_cartoons/45.jpg">
+            <img id="photoLineUp" src="../other/images/bm_cartoons/46.jpg">
+          </a>
         </blockquote>
 
+      </div> <!-- End of article -->
 
-
-      </div>
-
-      <div class="w3-content w3-black w3-border-right w3-border-blue"  style="max-width:700px; " id="episodeTwo">
-        <div class="header">
-          <h2 class="header"> Episode 2 </h2>
+      <!-- The Page: Hidden -->
+      <div class="w3-content w3-black w3-border-right w3-border-blue"  style="max-width:700px; " id="pageSections">
+        <div class="titularSections">
+          <h2 class="titularSections"> Episode 2 </h2>
         </div>
         <h1 class="intro">So...</h1>
 
@@ -195,80 +215,80 @@
 
       </div>
 
-  <!-- Footer -->
-  <footer class="w3-container w3-padding-32 w3-grey" style="margin-left: 150px">
-    <div class="w3-row-padding">
-      <div class="w3-third">
-        <h3>INFO</h3>
-        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      </div>
+      <!-- Footer -->
+      <footer class="w3-container w3-padding-32 w3-grey" style="margin-left: 150px">
+        <div class="w3-row-padding">
+          <div class="w3-third">
+            <h3>INFO</h3>
+            <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+          </div>
 
-      <div class="w3-third">
-        <h3>BLOG POSTS</h3>
-        <ul class="w3-ul">
-          <li class="w3-padding-16 w3-hover-black">
-            <img src="/w3images/workshop.jpg" class="w3-left w3-margin-right" style="width:50px">
-            <span class="w3-large">Lorem</span><br>
-            <span>Sed mattis nunc</span>
-          </li>
-          <li class="w3-padding-16 w3-hover-black">
-            <img src="/w3images/gondol.jpg" class="w3-left w3-margin-right" style="width:50px">
-            <span class="w3-large">Ipsum</span><br>
-            <span>Praes tinci sed</span>
-          </li>
-        </ul>
-      </div>
+          <div class="w3-third">
+            <h3>BLOG POSTS</h3>
+            <ul class="w3-ul">
+              <li class="w3-padding-16 w3-hover-black">
+                <img src="/w3images/workshop.jpg" class="w3-left w3-margin-right" style="width:50px">
+                <span class="w3-large">Lorem</span><br>
+                <span>Sed mattis nunc</span>
+              </li>
+              <li class="w3-padding-16 w3-hover-black">
+                <img src="/w3images/gondol.jpg" class="w3-left w3-margin-right" style="width:50px">
+                <span class="w3-large">Ipsum</span><br>
+                <span>Praes tinci sed</span>
+              </li>
+            </ul>
+          </div>
 
-      <div class="w3-third">
-        <h3>POPULAR TAGS</h3>
-        <p>
-          <span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">London</span>
-          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">IKEA</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">NORWAY</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">DIY</span>
-          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Baby</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Family</span>
-          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">News</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Clothing</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Shopping</span>
-          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Sports</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Games</span>
-        </p>
-      </div>
-    </div>
-  </footer>
+          <div class="w3-third">
+            <h3>POPULAR TAGS</h3>
+            <p>
+              <span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">London</span>
+              <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">IKEA</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">NORWAY</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">DIY</span>
+              <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Baby</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Family</span>
+              <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">News</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Clothing</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Shopping</span>
+              <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Sports</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Games</span>
+            </p>
+          </div>
+        </div>
+      </footer>
+      <!-- E Corp content -->
+      <div class="w3-black w3-center w3-padding-24" style="margin-left: 150px">Powered by <a href="../other/videoHtmls/evilCorp.html" style="color:red; text-decoration: none"  title="W3.CSS" target="_blank" class="w3-hover-opacity">E CORP</a></div>
 
-  <div class="w3-black w3-center w3-padding-24" style="margin-left: 150px">Powered by <a href="../other/videoHtmls/evilCorp.html" style="color:red; text-decoration: none"  title="W3.CSS" target="_blank" class="w3-hover-opacity">E CORP</a></div>
 
-<!-- End page content -->
-</div>
+</div> <!-- End page content -->
 
 <script>
-// Script to open and close sidebar
-function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
-}
+  // Script to open and close sidebar
+  function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+      document.getElementById("myOverlay").style.display = "block";
+  }
 
-function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
-}
+  function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+      document.getElementById("myOverlay").style.display = "none";
+  }
 
-function openCity(evt, cityName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("w3-content w3-black w3-border-right w3-border-blue");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
+  function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("w3-content w3-black w3-border-right w3-border-blue");
+      for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+  }
 
-function goBack() {
-    window.history.back();
-}
+  function goBack() {
+      window.history.back();
+  }
 
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
 
 </script>
 

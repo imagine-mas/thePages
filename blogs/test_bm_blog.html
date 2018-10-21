@@ -1,0 +1,1603 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dark Pages</title>
+  <link rel="shortcut icon" type="image/jpg" href="../other/images/black_sq_x.jpg">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href='https://fonts.googleapis.com/css?family=Archivo Black' rel='stylesheet'>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+  body {
+    font-family: Verdana, sans-serif;
+    margin: 0;
+    background: black;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .row > .column {
+    padding: 0 8px;
+    margin-left: 30px;
+    margin-bottom: 50px;
+  }
+
+  h2{
+    margin-left: 30px;
+    font-family: 'Archivo Black';
+    font-size: 40px;
+    padding-top: 0px;
+    margin-top: 0px;
+    -webkit-text-fill-color: red;
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-width: 0.50px;
+
+  }
+
+  h1{
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .column {
+    float: left;
+    width: 25%;
+  }
+
+  /* The Modal (background) */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+  }
+
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
+  }
+
+  /* The Close Button */
+  .close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .mySlides {
+    display: none;
+  }
+
+  .cursor {
+    cursor: pointer;
+  }
+
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: black;
+    font-weight: bold;
+    font-size: 50px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+
+  img {
+    margin-bottom: -4px;
+  }
+
+  .caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+  }
+
+  .demo {
+    opacity: 0.6;
+  }
+
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+
+  img.hover-shadow {
+    transition: 0.3s;
+  }
+
+  .hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .mySlidesOne,
+  .mySlidesTwo,
+  .mySlidesThree,
+  .mySlidesFour{
+    overflow: hidden;
+  }
+
+
+</style>
+
+<body> <!-- Start of a page -->
+  <!-- Title -->
+  <h1 onclick="goBack()" style="text-align:center; color: red; font-family: 'Archivo Black';font-size: 42px;">Black Mirror</h2>
+
+  <!-- Season 1 Section -->
+  <h2 onclick="goBack()"id="Season1" style="text-align:left; color: red">Season 1</h2>
+  <!-- Row of images  -->
+  <div class="row" style="margin-bottom: 100px;">
+    <div class="column">
+      <img src="../other/images/bm_cartoons/11.jpg" style="width:100%" onclick="openModal1();currentSlideOne(1)" class="hover-shadow cursor">
+    </div>
+    <div class="column">
+      <img src="../other/images/bm_cartoons/12.jpg" style="width:100%" onclick="openModal1();currentSlideOne(2)" class="hover-shadow cursor">
+    </div>
+    <div class="column">
+      <img src="../other/images/bm_cartoons/13.jpg" style="width:100%" onclick="openModal1();currentSlideOne(3)" class="hover-shadow cursor">
+    </div>
+  </div>
+
+  <!-- Season 1 Slideshow -->
+  <div id="myModal1" class="modal">
+    <span class="close cursor" onclick="closeModal1()">&times;</span>
+    <div class="modal-content">
+
+      <!-- Episode 1 -->
+      <div class="mySlidesOne" style="overflow:auto; overflow:hidden;">
+        <!-- Photo -->
+        <img src="../other/images/bm_cartoons/11.jpg" style="width:30%; float:left;">
+        <!-- Episode 1 Rating-->
+        <!-- Wording content -->
+        <div>
+          <h1>The National Anthem</h1>
+          <p>This episode was so forgettable, besides its WTF moment, that I can ever write a synposis about it.</p>
+        </div>
+        <!-- Graphics -->
+          <!-- Outer divs to control sizing -->
+        <div style="width:40%; float:left; margin-left:2%">
+          <div style="display: table; width:100%;">
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%;vertical-align: middle;">
+                Technology
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-purple" style="height:24px;width:2%; float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div><!-- End of row -->
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%;vertical-align: middle;">
+                WTF Rating
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-purple" style="height:24px;width:75%;float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div> <!-- End of row -->
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%; vertical-align: middle;">
+                Leaves you thinking
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-purple" style="height:24px;width:15%;float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div> <!-- End of row -->
+          </div> <!-- End of table -->
+        </div> <!-- End of div -->
+        <i class="fa fa-thumbs-down" style="font-size:120px;color:#cea3ff; margin-left:10%"></i>
+
+      </div> <!-- End of episode 1 -->
+
+      <!-- Episode 2 -->
+      <div class="mySlidesOne" style="overflow:auto; overflow:hidden;">
+        <!-- Photo -->
+        <img src="../other/images/bm_cartoons/12.jpg" style="width:30%; float:left;">
+        <!-- Episode 2 Rating-->
+        <!-- Wording content -->
+        <div>
+          <h1>Fifteen Million Merits</h1>
+          <p>This is a good episode. It starts off slow and takes awhile to build up,
+            but the climax of the episode is definitely worth the wait. This episode makes
+          you think about what's "real" anymore in the face of our new technological world.</p>
+        </div>
+        <!-- Graphics -->
+          <!-- Outer divs to control sizing -->
+        <div style="width:40%; float:left; margin-left:2%">
+          <div style="display: table; width:100%;">
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%;vertical-align: middle;">
+                Technology
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-yellow" style="height:24px;width:40%; float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div><!-- End of row -->
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%;vertical-align: middle;">
+                WTF Rating
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-light-green" style="height:24px;width:75%;float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div> <!-- End of row -->
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%; vertical-align: middle;">
+                Leaves you thinking
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-green" style="height:24px;width:85%;float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div> <!-- End of row -->
+          </div> <!-- End of table -->
+        </div> <!-- End of div -->
+        <i class="fa fa-thumbs-up" style="font-size:120px;color:#85d37e; margin-left:10%"></i>
+
+      </div> <!-- End of episode 2 -->
+
+      <!-- Episode 3 -->
+      <div class="mySlidesOne" style="overflow:auto; overflow:hidden;">
+        <!-- Photo -->
+        <img src="../other/images/bm_cartoons/13.jpg" style="width:30%; float:left;">
+        <!-- Episode 3 Rating-->
+        <!-- Wording content -->
+        <div>
+          <h1>The Entire History of You</h1>
+          <p>One of my favorites. A world of instant memory replay, obsession
+            can be taken to a whole other level. Unlike some other Black Mirror,
+          the tone is dark and it gets a little humorous at the end.</p>
+        </div>
+        <!-- Graphics -->
+          <!-- Outer divs to control sizing -->
+        <div style="width:40%; float:left; margin-left:2%">
+          <div style="display: table; width:100%;">
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%;vertical-align: middle;">
+                Technology
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-green" style="height:24px;width:85%; float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div><!-- End of row -->
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%;vertical-align: middle;">
+                WTF Rating
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-light-green" style="height:24px;width:70%;float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div> <!-- End of row -->
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%; vertical-align: middle;">
+                Leaves you thinking
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-light-green" style="height:24px;width:40%;float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div> <!-- End of row -->
+          </div> <!-- End of table -->
+        </div> <!-- End of div -->
+        <i class="fa fa-thumbs-up" style="font-size:120px;color:#20ba12; margin-left:10%"></i>
+
+      </div> <!-- End of episode 3 -->
+
+      <!-- The front and back arrow buttons -->
+      <a class="prev" onclick="plusSlidesOne(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlidesOne(1)">&#10095;</a>
+
+    </div> <!-- The first end to the slides content -->
+  </div> <!-- The second end to the slides content -->
+
+  <!-- Season 2 on the page -->
+  <h2 onclick="goBack()" id="Season2" style="text-align:left; color: red">Season 2</h2>
+  <div class="row">
+    <div class="column">
+      <img src="../other/images/bm_cartoons/21.jpg" style="width:100%" onclick="openModal2();currentSlideTwo(1)" class="hover-shadow cursor">
+    </div>
+    <div class="column">
+      <img src="../other/images/bm_cartoons/22.jpg" style="width:100%" onclick="openModal2();currentSlideTwo(2)" class="hover-shadow cursor">
+    </div>
+    <div class="column">
+      <img src="../other/images/bm_cartoons/23.jpg" style="width:100%" onclick="openModal2();currentSlideTwo(3)" class="hover-shadow cursor">
+    </div>
+  </div>
+  <div class="row" style="margin-bottom: 100px;">
+    <div class="column">
+      <img src="../other/images/bm_cartoons/24.jpg" style="width:100%" onclick="openModal2();currentSlideTwo(4)" class="hover-shadow cursor">
+    </div>
+  </div>
+
+  <!-- Season 2 in the slideshow -->
+  <div id="myModal2" class="modal">
+    <span class="close cursor" onclick="closeModal2()">&times;</span>
+    <div class="modal-content">
+
+      <!-- Episode 1 -->
+      <div class="mySlidesTwo" style="overflow:auto; overflow:hidden;">
+        <img src="../other/images/bm_cartoons/21.jpg" style="width:30%; float:left;">
+        <!-- Episode 1 Rating-->
+        <!-- Wording content -->
+        <div>
+          <h1>Be Rigt Back</h1>
+          <p>This is not one of the more exciting episodes of Black Mirror. This one confronts using technology
+          to combat lonliness and the implications of such a task. Dim, melancholy and eerie, <i>Be Right Back</i> says
+        some holes just can't be filled.</p>
+        </div>
+        <!-- Graphics -->
+          <!-- Outer divs to control sizing -->
+        <div style="width:40%; float:left; margin-left:2%">
+          <div style="display: table; width:100%;">
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%;vertical-align: middle;">
+                Technology
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-red" style="height:24px;width:30%; float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div><!-- End of row -->
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%;vertical-align: middle;">
+                WTF Rating
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-red" style="height:24px;width:50%;float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div> <!-- End of row -->
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%; vertical-align: middle;">
+                Leaves you thinking
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-red" style="height:24px;width:70%;float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div> <!-- End of row -->
+          </div> <!-- End of table -->
+        </div> <!-- End of div -->
+        <i class="fa fa-thumbs-down" style="font-size:120px;color:#f94d40; margin-left:10%"></i>
+      </div>
+      <!-- Episode 2 -->
+      <div class="mySlidesTwo" style="overflow:auto; overflow:hidden;">
+        <img src="../other/images/bm_cartoons/22.jpg" style="width:30%; float:left;">
+        <!-- Episode 2 Rating-->
+        <!-- Wording content -->
+        <div>
+          <h1>White Bear</h1>
+          <p>Fun Fact: This is the first Black Mirror Episode I ever watched.
+          Everyone I've might loves this episode. It's filled with mystery, confusion, suspense, and
+        action- well, running. Lots of it. </p>
+        </div>
+        <!-- Graphics -->
+          <!-- Outer divs to control sizing -->
+        <div style="width:40%; float:left; margin-left:2%">
+          <div style="display: table; width:100%;">
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%;vertical-align: middle;">
+                Technology
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-purple" style="height:24px;width:20%; float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div><!-- End of row -->
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%;vertical-align: middle;">
+                WTF Rating
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-purple" style="height:24px;width:90%;float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div> <!-- End of row -->
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%; vertical-align: middle;">
+                Leaves you thinking
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-purple" style="height:24px;width:90%;float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div> <!-- End of row -->
+          </div> <!-- End of table -->
+        </div> <!-- End of div -->
+        <i class="fa fa-thumbs-up" style="font-size:120px;color:#cea3ff; margin-left:10%"></i>
+      </div>
+      <!-- Episode 3 -->
+      <div class="mySlidesTwo" style="overflow:auto; overflow:hidden;">
+        <img src="../other/images/bm_cartoons/23.jpg" style="width:30%; float:left;">
+        <!-- Episode 3 Rating-->
+        <!-- Wording content -->
+        <div>
+          <h1>The Waldo Moment</h1>
+          <p>Bland, weirdo and anti-climax. Definite has meaning though. If you're looking
+           for a Black Mirror episode that looks at a Trump-like reality, this is the one for
+         you, hence this episodes picture.</p>
+        </div>
+        <!-- Graphics -->
+          <!-- Outer divs to control sizing -->
+        <div style="width:40%; float:left; margin-left:2%">
+          <div style="display: table; width:100%;">
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%;vertical-align: middle;">
+                Technology
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-purple" style="height:24px;width:10%; float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div><!-- End of row -->
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%;vertical-align: middle;">
+                WTF Rating
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-purple" style="height:24px;width:45%;float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div> <!-- End of row -->
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%; vertical-align: middle;">
+                Leaves you thinking
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-purple" style="height:24px;width:30%;float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div> <!-- End of row -->
+          </div> <!-- End of table -->
+        </div> <!-- End of div -->
+        <i class="fa fa-thumbs-down" style="font-size:120px;color:#cea3ff; margin-left:10%"></i>
+      </div>
+      <!-- Episode 4 -->
+      <div class="mySlidesTwo" style="overflow:auto; overflow:hidden;">
+        <img src="../other/images/bm_cartoons/24.jpg" style="width:30%; float:left;">
+        <!-- Episode 4 Rating-->
+        <!-- Wording content -->
+        <div>
+          <h1>White Christmas</h1>
+          <p></p>
+        </div>
+        <!-- Graphics -->
+          <!-- Outer divs to control sizing -->
+        <div style="width:40%; float:left; margin-left:2%">
+          <div style="display: table; width:100%;">
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%;vertical-align: middle;">
+                Technology
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-purple" style="height:24px;width:90%; float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div><!-- End of row -->
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%;vertical-align: middle;">
+                WTF Rating
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-purple" style="height:24px;width:90%;float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div> <!-- End of row -->
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%; vertical-align: middle;">
+                Leaves you thinking
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-purple" style="height:24px;width:90%;float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div> <!-- End of row -->
+          </div> <!-- End of table -->
+        </div> <!-- End of div -->
+        <i class="fa fa-thumbs-up" style="font-size:120px;color:#cea3ff; margin-left:10%"></i>
+      </div>
+
+      <a class="prev" onclick="plusSlidesTwo(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlidesTwo(1)">&#10095;</a>
+
+    </div>
+  </div>
+
+  <!-- Season 3 on the page -->
+  <h2 onclick="goBack()" id="Season3" style="text-align:left; color: red">Season 3</h2>
+  <div class="row">
+    <div class="column">
+      <img src="../other/images/bm_cartoons/31.jpg" style="width:100%" onclick="openModal3();currentSlideThree(1)" class="hover-shadow cursor">
+    </div>
+    <div class="column">
+      <img src="../other/images/bm_cartoons/32.jpeg" style="width:100%" onclick="openModal3();currentSlideThree(2)" class="hover-shadow cursor">
+    </div>
+    <div class="column">
+      <img src="../other/images/bm_cartoons/33.jpg" style="width:100%" onclick="openModal3();currentSlideThree(3)" class="hover-shadow cursor">
+    </div>
+  </div>
+  <div class="row" style="margin-bottom: 100px;">
+    <div class="column">
+      <img src="../other/images/bm_cartoons/34.jpeg" style="width:100%" onclick="openModal3();currentSlideThree(4)" class="hover-shadow cursor">
+    </div>
+    <div class="column">
+      <img src="../other/images/bm_cartoons/35.jpg" style="width:100%" onclick="openModal3();currentSlideThree(5)" class="hover-shadow cursor">
+    </div>
+    <div class="column">
+      <img src="../other/images/bm_cartoons/36.jpg" style="width:100%" onclick="openModal3();currentSlideThree(6)" class="hover-shadow cursor">
+    </div>
+  </div>
+
+  <!-- Season 3 in the slideshow -->
+  <div id="myModal3" class="modal">
+    <span class="close cursor" onclick="closeModal3()">&times;</span>
+    <div class="modal-content">
+
+      <!-- Episode 1 -->
+      <div class="mySlidesThree" style="overflow:auto; overflow:hidden;">
+        <img src="../other/images/bm_cartoons/31.jpg" style="width:30%; float:left;">
+        <!-- Episode 1 Rating-->
+        <!-- Wording content -->
+        <div>
+          <h1>The National Anthem</h1>
+          <p>This episode was so forgettable, besides its WTF moment, that I can ever write a synposis about it.</p>
+        </div>
+        <!-- Graphics -->
+          <!-- Outer divs to control sizing -->
+        <div style="width:40%; float:left; margin-left:2%">
+          <div style="display: table; width:100%;">
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%;vertical-align: middle;">
+                Technology
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-purple" style="height:24px;width:2%; float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div><!-- End of row -->
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%;vertical-align: middle;">
+                WTF Rating
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-purple" style="height:24px;width:75%;float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div> <!-- End of row -->
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%; vertical-align: middle;">
+                Leaves you thinking
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-purple" style="height:24px;width:15%;float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div> <!-- End of row -->
+          </div> <!-- End of table -->
+        </div> <!-- End of div -->
+        <i class="fa fa-thumbs-down" style="font-size:120px;color:#cea3ff; margin-left:10%"></i>
+      </div>
+      <!-- Episode 2 -->
+      <div class="mySlidesThree" style="overflow:auto; overflow:hidden;">
+        <img src="../other/images/bm_cartoons/32.jpeg" style="width:30%; float:left;">
+        <!-- Episode 2 Rating-->
+        <!-- Wording content -->
+        <div>
+          <h1>The National Anthem</h1>
+          <p>This episode was so forgettable, besides its WTF moment, that I can ever write a synposis about it.</p>
+        </div>
+        <!-- Graphics -->
+          <!-- Outer divs to control sizing -->
+        <div style="width:40%; float:left; margin-left:2%">
+          <div style="display: table; width:100%;">
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%;vertical-align: middle;">
+                Technology
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-purple" style="height:24px;width:2%; float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div><!-- End of row -->
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%;vertical-align: middle;">
+                WTF Rating
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-purple" style="height:24px;width:75%;float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div> <!-- End of row -->
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%; vertical-align: middle;">
+                Leaves you thinking
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-purple" style="height:24px;width:15%;float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div> <!-- End of row -->
+          </div> <!-- End of table -->
+        </div> <!-- End of div -->
+        <i class="fa fa-thumbs-down" style="font-size:120px;color:#cea3ff; margin-left:10%"></i>
+      </div>
+      <!-- Episode 3 -->
+      <div class="mySlidesThree" style="overflow:auto; overflow:hidden;">
+        <img src="../other/images/bm_cartoons/33.jpg" style="width:30%; float:left;">
+        <!-- Episode 3 Rating-->
+        <!-- Wording content -->
+        <div>
+          <h1>The National Anthem</h1>
+          <p>This episode was so forgettable, besides its WTF moment, that I can ever write a synposis about it.</p>
+        </div>
+        <!-- Graphics -->
+          <!-- Outer divs to control sizing -->
+        <div style="width:40%; float:left; margin-left:2%">
+          <div style="display: table; width:100%;">
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%;vertical-align: middle;">
+                Technology
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-purple" style="height:24px;width:2%; float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div><!-- End of row -->
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%;vertical-align: middle;">
+                WTF Rating
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-purple" style="height:24px;width:75%;float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div> <!-- End of row -->
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%; vertical-align: middle;">
+                Leaves you thinking
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-purple" style="height:24px;width:15%;float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div> <!-- End of row -->
+          </div> <!-- End of table -->
+        </div> <!-- End of div -->
+        <i class="fa fa-thumbs-down" style="font-size:120px;color:#cea3ff; margin-left:10%"></i>
+      </div>
+      <!-- Episode 4 -->
+      <div class="mySlidesThree" style="overflow:auto; overflow:hidden;">
+        <img src="../other/images/bm_cartoons/34.jpeg" style="width:30%; float:left;">
+        <!-- Episode 4 Rating-->
+        <!-- Wording content -->
+        <div>
+          <h1>The National Anthem</h1>
+          <p>This episode was so forgettable, besides its WTF moment, that I can ever write a synposis about it.</p>
+        </div>
+        <!-- Graphics -->
+          <!-- Outer divs to control sizing -->
+        <div style="width:40%; float:left; margin-left:2%">
+          <div style="display: table; width:100%;">
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%;vertical-align: middle;">
+                Technology
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-purple" style="height:24px;width:2%; float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div><!-- End of row -->
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%;vertical-align: middle;">
+                WTF Rating
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-purple" style="height:24px;width:75%;float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div> <!-- End of row -->
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%; vertical-align: middle;">
+                Leaves you thinking
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-purple" style="height:24px;width:15%;float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div> <!-- End of row -->
+          </div> <!-- End of table -->
+        </div> <!-- End of div -->
+        <i class="fa fa-thumbs-down" style="font-size:120px;color:#cea3ff; margin-left:10%"></i>
+      </div>
+      <!-- Episode 5 -->
+      <div class="mySlidesThree" style="overflow:auto; overflow:hidden;">
+        <img src="../other/images/bm_cartoons/35.jpg" style="width:30%; float:left;">
+        <!-- Episode 5 Rating-->
+        <!-- Wording content -->
+        <div>
+          <h1>The National Anthem</h1>
+          <p>This episode was so forgettable, besides its WTF moment, that I can ever write a synposis about it.</p>
+        </div>
+        <!-- Graphics -->
+          <!-- Outer divs to control sizing -->
+        <div style="width:40%; float:left; margin-left:2%">
+          <div style="display: table; width:100%;">
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%;vertical-align: middle;">
+                Technology
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-purple" style="height:24px;width:2%; float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div><!-- End of row -->
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%;vertical-align: middle;">
+                WTF Rating
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-purple" style="height:24px;width:75%;float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div> <!-- End of row -->
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%; vertical-align: middle;">
+                Leaves you thinking
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-purple" style="height:24px;width:15%;float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div> <!-- End of row -->
+          </div> <!-- End of table -->
+        </div> <!-- End of div -->
+        <i class="fa fa-thumbs-down" style="font-size:120px;color:#cea3ff; margin-left:10%"></i>
+      </div>
+      <!-- Episode 6 -->
+      <div class="mySlidesThree" style="overflow:auto; overflow:hidden;">
+        <img src="../other/images/bm_cartoons/36.jpg" style="width:30%; float:left;">
+        <!-- Episode 6 Rating-->
+        <!-- Wording content -->
+        <div>
+          <h1>The National Anthem</h1>
+          <p>This episode was so forgettable, besides its WTF moment, that I can ever write a synposis about it.</p>
+        </div>
+        <!-- Graphics -->
+          <!-- Outer divs to control sizing -->
+        <div style="width:40%; float:left; margin-left:2%">
+          <div style="display: table; width:100%;">
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%;vertical-align: middle;">
+                Technology
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-purple" style="height:24px;width:2%; float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div><!-- End of row -->
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%;vertical-align: middle;">
+                WTF Rating
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-purple" style="height:24px;width:75%;float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div> <!-- End of row -->
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%; vertical-align: middle;">
+                Leaves you thinking
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-purple" style="height:24px;width:15%;float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div> <!-- End of row -->
+          </div> <!-- End of table -->
+        </div> <!-- End of div -->
+        <i class="fa fa-thumbs-down" style="font-size:120px;color:#cea3ff; margin-left:10%"></i>
+      </div>
+
+      <a class="prev" onclick="plusSlidesThree(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlidesThree(1)">&#10095;</a>
+
+    </div>
+  </div>
+
+  <!-- Season 4 on the page -->
+  <h2 onclick="goBack()" id="Season4" style="text-align:left; color: red">Season 4</h2>
+  <div class="row">
+    <div class="column">
+      <img src="../other/images/bm_cartoons/41.png" style="width:100%" onclick="openModal4();currentSlideFour(1)" class="hover-shadow cursor">
+    </div>
+    <div class="column">
+      <img src="../other/images/bm_cartoons/42.jpg" style="width:110%" onclick="openModal4();currentSlideFour(2)" class="hover-shadow cursor">
+    </div>
+    <div class="column">
+      <img src="../other/images/bm_cartoons/43.jpg" style="width:100%" onclick="openModal4();currentSlideFour(3)" class="hover-shadow cursor">
+    </div>
+  </div>
+  <div class="row" style="margin-bottom: 100px;">
+    <div class="column">
+      <img src="../other/images/bm_cartoons/44.jpg" style="width:100%" onclick="openModal4();currentSlideFour(4)" class="hover-shadow cursor">
+    </div>
+    <div class="column">
+      <img src="../other/images/bm_cartoons/45.jpg" style="width:100%" onclick="openModal4();currentSlideFour(5)" class="hover-shadow cursor">
+    </div>
+    <div class="column">
+      <img src="../other/images/bm_cartoons/46.jpg" style="width:100%" onclick="openModal4();currentSlideFour(6)" class="hover-shadow cursor">
+    </div>
+
+  </div>
+
+
+  <!-- Season 4 in the slideshow -->
+  <div id="myModal4" class="modal">
+    <span class="close cursor" onclick="closeModal4()">&times;</span>
+    <div class="modal-content">
+
+      <!-- Episode 1 -->
+      <div class="mySlidesFour" style="overflow:auto; overflow:hidden;">
+        <img src="../other/images/bm_cartoons/41.png" style="width:30%; float:left;">
+        <!-- Episode 1 Rating-->
+        <!-- Wording content -->
+        <div>
+          <h1>The National Anthem</h1>
+          <p>This episode was so forgettable, besides its WTF moment, that I can ever write a synposis about it.</p>
+        </div>
+        <!-- Graphics -->
+          <!-- Outer divs to control sizing -->
+        <div style="width:40%; float:left; margin-left:2%">
+          <div style="display: table; width:100%;">
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%;vertical-align: middle;">
+                Technology
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-purple" style="height:24px;width:2%; float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div><!-- End of row -->
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%;vertical-align: middle;">
+                WTF Rating
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-purple" style="height:24px;width:75%;float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div> <!-- End of row -->
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%; vertical-align: middle;">
+                Leaves you thinking
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-purple" style="height:24px;width:15%;float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div> <!-- End of row -->
+          </div> <!-- End of table -->
+        </div> <!-- End of div -->
+        <i class="fa fa-thumbs-down" style="font-size:120px;color:#cea3ff; margin-left:10%"></i>
+      </div>
+      <!-- Episode 2 -->
+      <div class="mySlidesFour" style="overflow:auto; overflow:hidden;">
+        <img src="../other/images/bm_cartoons/42.jpg" style="width:30%; float:left;">
+        <!-- Episode 2 Rating-->
+        <!-- Wording content -->
+        <div>
+          <h1>The National Anthem</h1>
+          <p>This episode was so forgettable, besides its WTF moment, that I can ever write a synposis about it.</p>
+        </div>
+        <!-- Graphics -->
+          <!-- Outer divs to control sizing -->
+        <div style="width:40%; float:left; margin-left:2%">
+          <div style="display: table; width:100%;">
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%;vertical-align: middle;">
+                Technology
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-purple" style="height:24px;width:2%; float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div><!-- End of row -->
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%;vertical-align: middle;">
+                WTF Rating
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-purple" style="height:24px;width:75%;float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div> <!-- End of row -->
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%; vertical-align: middle;">
+                Leaves you thinking
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-purple" style="height:24px;width:15%;float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div> <!-- End of row -->
+          </div> <!-- End of table -->
+        </div> <!-- End of div -->
+        <i class="fa fa-thumbs-down" style="font-size:120px;color:#cea3ff; margin-left:10%"></i>
+      </div>
+      <!-- Episode 3 -->
+      <div class="mySlidesFour" style="overflow:auto; overflow:hidden;">
+        <img src="../other/images/bm_cartoons/43.jpg" style="width:30%; float:left;">
+        <!-- Episode 3 Rating-->
+        <!-- Wording content -->
+        <div>
+          <h1>The National Anthem</h1>
+          <p>This episode was so forgettable, besides its WTF moment, that I can ever write a synposis about it.</p>
+        </div>
+        <!-- Graphics -->
+          <!-- Outer divs to control sizing -->
+        <div style="width:40%; float:left; margin-left:2%">
+          <div style="display: table; width:100%;">
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%;vertical-align: middle;">
+                Technology
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-purple" style="height:24px;width:2%; float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div><!-- End of row -->
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%;vertical-align: middle;">
+                WTF Rating
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-purple" style="height:24px;width:75%;float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div> <!-- End of row -->
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%; vertical-align: middle;">
+                Leaves you thinking
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-purple" style="height:24px;width:15%;float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div> <!-- End of row -->
+          </div> <!-- End of table -->
+        </div> <!-- End of div -->
+        <i class="fa fa-thumbs-down" style="font-size:120px;color:#cea3ff; margin-left:10%"></i>
+      </div>
+      <!-- Episode 4 -->
+      <div class="mySlidesFour" style="overflow:auto; overflow:hidden;">
+        <img src="../other/images/bm_cartoons/44.jpg" style="width:30%; float:left;">
+        <!-- Episode 4 Rating-->
+        <!-- Wording content -->
+        <div>
+          <h1>The National Anthem</h1>
+          <p>This episode was so forgettable, besides its WTF moment, that I can ever write a synposis about it.</p>
+        </div>
+        <!-- Graphics -->
+          <!-- Outer divs to control sizing -->
+        <div style="width:40%; float:left; margin-left:2%">
+          <div style="display: table; width:100%;">
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%;vertical-align: middle;">
+                Technology
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-purple" style="height:24px;width:2%; float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div><!-- End of row -->
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%;vertical-align: middle;">
+                WTF Rating
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-purple" style="height:24px;width:75%;float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div> <!-- End of row -->
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%; vertical-align: middle;">
+                Leaves you thinking
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-purple" style="height:24px;width:15%;float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div> <!-- End of row -->
+          </div> <!-- End of table -->
+        </div> <!-- End of div -->
+        <i class="fa fa-thumbs-down" style="font-size:120px;color:#cea3ff; margin-left:10%"></i>
+      </div>
+      <!-- Episode 5 -->
+      <div class="mySlidesFour" style="overflow:auto; overflow:hidden;">
+        <img src="../other/images/bm_cartoons/45.jpg" style="width:30%; float:left;">
+        <!-- Episode 5 Rating-->
+        <!-- Wording content -->
+        <div>
+          <h1>The National Anthem</h1>
+          <p>This episode was so forgettable, besides its WTF moment, that I can ever write a synposis about it.</p>
+        </div>
+        <!-- Graphics -->
+          <!-- Outer divs to control sizing -->
+        <div style="width:40%; float:left; margin-left:2%">
+          <div style="display: table; width:100%;">
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%;vertical-align: middle;">
+                Technology
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-purple" style="height:24px;width:2%; float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div><!-- End of row -->
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%;vertical-align: middle;">
+                WTF Rating
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-purple" style="height:24px;width:75%;float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div> <!-- End of row -->
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%; vertical-align: middle;">
+                Leaves you thinking
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-purple" style="height:24px;width:15%;float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div> <!-- End of row -->
+          </div> <!-- End of table -->
+        </div> <!-- End of div -->
+        <i class="fa fa-thumbs-down" style="font-size:120px;color:#cea3ff; margin-left:10%"></i>
+      </div>
+      <!-- Episode 6 -->
+      <div class="mySlidesFour" style="overflow:auto; overflow:hidden;">
+        <img src="../other/images/bm_cartoons/46.jpg" style="width:30%; float:left;">
+        <!-- Episode 6 Rating-->
+        <!-- Wording content -->
+        <div>
+          <h1>The National Anthem</h1>
+          <p>This episode was so forgettable, besides its WTF moment, that I can ever write a synposis about it.</p>
+        </div>
+        <!-- Graphics -->
+          <!-- Outer divs to control sizing -->
+        <div style="width:40%; float:left; margin-left:2%">
+          <div style="display: table; width:100%;">
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%;vertical-align: middle;">
+                Technology
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-purple" style="height:24px;width:2%; float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div><!-- End of row -->
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%;vertical-align: middle;">
+                WTF Rating
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-purple" style="height:24px;width:75%;float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div> <!-- End of row -->
+            <!-- New row -->
+            <div style="display: table-row; width: 100%;height:50px;">
+              <!-- Cell for word -->
+              <div style="display: table-cell;width:35%; vertical-align: middle;">
+                Leaves you thinking
+              </div>
+              <!-- Cell for graphics bar -->
+              <div style="display: table-cell; width:65%;">
+                <div class="w3-border-lightgrey w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height:36px">
+                  <div class="w3-purple" style="height:24px;width:15%;float:left; margin-right:7px;">
+                  </div> <!-- Bar -->
+                </div> <!-- Border -->
+              </div> <!-- End of cell -->
+            </div> <!-- End of row -->
+          </div> <!-- End of table -->
+        </div> <!-- End of div -->
+        <i class="fa fa-thumbs-down" style="font-size:120px;color:#cea3ff; margin-left:10%"></i>
+      </div>
+
+      <a class="prev" onclick="plusSlidesFour(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlidesFour(1)">&#10095;</a>
+
+    </div>
+  </div>
+
+  <script>
+    // Open and close the differnt seasons' slides
+    function openModal1() {
+      document.getElementById('myModal1').style.display = "block";
+    }
+
+    function closeModal1() {
+      document.getElementById('myModal1').style.display = "none";
+    }
+
+    function openModal2() {
+      document.getElementById('myModal2').style.display = "block";
+    }
+
+    function closeModal2() {
+      document.getElementById('myModal2').style.display = "none";
+    }
+
+    function openModal3() {
+      document.getElementById('myModal3').style.display = "block";
+    }
+
+    function closeModal3() {
+      document.getElementById('myModal3').style.display = "none";
+    }
+
+    function openModal4() {
+      document.getElementById('myModal4').style.display = "block";
+    }
+
+    function closeModal4() {
+      document.getElementById('myModal4').style.display = "none";
+    }
+
+    //  Move forward and backward through the slides
+    var slideIndex = 1;
+
+    function plusSlidesOne(n) {
+      showSlidesOne(slideIndex += n);
+    }
+
+    function plusSlidesTwo(n) {
+      showSlidesTwo(slideIndex += n);
+    }
+
+    function plusSlidesThree(n) {
+      showSlidesThree(slideIndex += n);
+    }
+
+    function plusSlidesFour(n) {
+      showSlidesFour(slideIndex += n);
+    }
+
+    // Display the slides
+    function currentSlideOne(n) {
+      showSlidesOne(slideIndex = n);
+    }
+
+    function currentSlideTwo(n) {
+      showSlidesTwo(slideIndex = n);
+    }
+
+    function currentSlideThree(n) {
+      showSlidesThree(slideIndex = n);
+    }
+
+    function currentSlideFour(n) {
+      showSlidesFour(slideIndex = n);
+    }
+
+    function showSlidesOne(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlidesOne");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+
+    function showSlidesTwo(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlidesTwo");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+
+    function showSlidesThree(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlidesThree");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+
+    function showSlidesFour(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlidesFour");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+
+    function goBack() {
+      window.history.back();
+  }
+
+  </script>
+
+</body>
+
+</html>

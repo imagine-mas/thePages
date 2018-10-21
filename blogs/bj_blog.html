@@ -1,47 +1,45 @@
 <!DOCTYPE html>
 <html>
-<title>Bojack Episode Analysis</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <title>Dark Pages</title>
+  <link rel="shortcut icon" type="image/jpg" href="../other/images/black_sq_x.jpg">
 
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
-<link href='https://fonts.googleapis.com/css?family=Snippet' rel='stylesheet'>
-<link href='https://fonts.googleapis.com/css?family=Sigmar One' rel='stylesheet'>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Snippet'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Sigmar One'>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel='stylesheet' href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
 
 <style>
-  body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 
+  /*--- For the colored scrollbar ---*/
   /* width */
-  ::-webkit-scrollbar {
-      width: 10px;
-      height: 4px;
-  }
-
+  ::-webkit-scrollbar { width: 10px; height: 4px; }
   /* Track */
-  ::-webkit-scrollbar-track {
-      background: black;
-  }
-
+  ::-webkit-scrollbar-track { background: black; }
   /* Handle */
-  ::-webkit-scrollbar-thumb {
-      background: darkred;
-  }
-
+  ::-webkit-scrollbar-thumb { background: darkred; }
   /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-      background: #555;
-  }
+  ::-webkit-scrollbar-thumb:hover { background: #555; }
 
-  button {
+  /*--- Elements ---*/
+  body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+  /* Dark Pages title design */
+  h3 { padding-top: 0px; padding-bottom: 15px; padding-left: 8px; }
+  /* Words inside of the articles*/
+  p { font-family: "Snippet"; font-size: 20px; }
+
+  blockquote { border-color: black; }
+  /* The titles in the side tab */
+  button
+  {
      background:inherit;
      border:none;
      padding-bottom:5px;
@@ -50,48 +48,9 @@
      outline: none;
      width: 100%;
   }
-
-
-  .intro{ /* The So header*/
-    color: #ed1515;
-
-    font-size: 35px;
-    font-family: "Snippet";
-    font-style: italic;
-    margin-left: 80px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
-
-  #smile {
-    font-size:300px;
-    margin-left: 35%;
-    color:#fff021;
-    text-shadow: 3px 3px 10px grey;
-  }
-
-  #episodeOne { /* the article div */
-    max-width:700px;
-    margin-top:0px;
-    padding-top:15px;
-    box-shadow: 0px 24px 28px 0px rgba(200, 200, 200, 0.2), 0px -26px 40px 0px rgba(200, 200, 200, 0.19);
-  }
-
-  #secondLook { /* the article div */
-    max-width:700px;
-    margin-top:0px;
-    padding-top:15px;
-    box-shadow: 0px 24px 28px 0px rgba(200, 200, 200, 0.2), 0px -26px 40px 0px rgba(200, 200, 200, 0.19);
-  }
-
-  #artArticle{ /* the article div */
-    max-width:700px;
-    margin-top:0px;
-    padding-top:15px;
-    box-shadow: 0px 24px 28px 0px rgba(200, 200, 200, 0.2), 0px -26px 40px 0px rgba(200, 200, 200, 0.19);
-  }
-
-  #chapOne{
+  /* Deafault image and video formatting */
+  img, video
+  {
     width: 60%;
     margin-left:12%;
     margin-right:5%;
@@ -99,14 +58,21 @@
     margin-bottom: 3%;
   }
 
-  #artGallery{
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top:3%;
-    margin-bottom: 3%;
+  /*--- Classes ---*/
+  /* The "So" header*/
+  .soHeader
+  {
+    color: #ed1515;
+    font-size: 35px;
+    font-family: "Snippet";
+    font-style: italic;
+    margin-left: 80px;
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
-  .header{
+  /* design for the title sections */
+  .titularSections
+  {
     background: #E5E7E9;
     width: 97%;
     color: #ed1515;
@@ -119,121 +85,111 @@
     margin-left: 10px;
   }
 
-  video{
-    width: 60%;
-    margin-left:20%;
-    margin-right:20%;
+  /*--- Ids ---*/
+  /* the article for watching bojack a second time */
+  #secondLookArticle
+  {
+    max-width:700px;
+    margin-top:0px;
+    padding-top:15px;
+    box-shadow: 0px 24px 28px 0px rgba(200, 200, 200, 0.2), 0px -26px 40px 0px rgba(200, 200, 200, 0.19);
+  }
+  /* the page div containing the art gallery */
+  #artArticleImagesArticle
+  {
+    max-width:700px;
+    margin-top:0px;
+    padding-top:15px;
+    box-shadow: 0px 24px 28px 0px rgba(200, 200, 200, 0.2), 0px -26px 40px 0px rgba(200, 200, 200, 0.19);
+  }
+  /* controls the design of the art gallery images */
+  #artArticleImages
+  {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
     margin-top:3%;
     margin-bottom: 3%;
   }
-
-  .drop {
-    animation: drop 0.15s cubic-bezier(1,1,1,1) forwards;
+  /* the article for episode one */
+  #episodeOneArticle
+  {
+    max-width:700px;
+    margin-top:0px;
+    padding-top:15px;
+    box-shadow: 0px 24px 28px 0px rgba(200, 200, 200, 0.2), 0px -26px 40px 0px rgba(200, 200, 200, 0.19);
   }
-
-  @keyframes drop {
-    0% {
-      transform-origin: center;
-      opacity: 1;
-    }
-
-    100% {
-      opacity: 80;
-      transform:
-        translate3d(0, 350px, 500px)
-        rotate3d(0, 0,
-
-           1, 10deg);
-    }
-  }
-
-  h3{
-    padding-top: 0px;
-    padding-bottom: 15px;
-    padding-left: 8px;
-  }
-
-  p{
-    font-family: "Snippet";
-    font-size: 20px;
-  }
-
-  blockquote{
-    border-color: black;
-  }
-
 </style>
 
 <body class="w3-content" style="max-width:1600px; background-color: #0f0f0f;">
 
+<!-- Not relevant material-->
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-bar-block w3-animate-left w3-text-grey w3-collapse w3-top" style="z-index:3;width:150px;font-weight:bold; background-color: #0f0f0f;" id="mySidebar">
   <h3 onclick="goBack()" class="w3-left-align"><b>The Dark Pages</b></h3>
-  <button class="tablinks" onclick="openCity(event, 'secondLook')" class="w3-bar-item w3-text-grey w3-button w3-right-align" id="defaultOpen">Article</button><br>
-  <!--<button class="tablinks" onclick="openCity(event, 'secondLook')" class="w3-bar-item w3-text-grey w3-button w3-right-align" >Episode 1</button><br>-->
-  <button class="tablinks" onclick="openCity(event, 'artArticle')" class="w3-bar-item w3-text-grey w3-button w3-right-align" >Art Gallery</button><br>
+  <button class="tablinks" onclick="openCity(event, 'secondLookArticle')" class="w3-bar-item w3-text-grey w3-button w3-right-align" id="defaultOpen">Article</button><br>
+  <button class="tablinks" onclick="openCity(event, 'episodeOneArticle')" class="w3-bar-item w3-text-grey w3-button w3-right-align" >Episode 1</button><br>
+  <button class="tablinks" onclick="openCity(event, 'artArticleImagesArticle')" class="w3-bar-item w3-text-grey w3-button w3-right-align" >Art Gallery</button><br>
 </nav>
-
 <!-- Top menu on small screens -->
-<header class="w3-container w3-top w3-hide-large w3-black w3-xlarge w3-padding-16">
+<titularSections class="w3-container w3-top w3-hide-large w3-black w3-xlarge w3-padding-16">
   <span class="w3-left-align w3-padding" style="color: white">Dark Pages</span>
   <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
-</header>
-
+</titularSections>
 <!-- Overlay effect when opening sidebar on small screens -->
 <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
+<!-- Relevant material -->
 <!-- !PAGE CONTENT! -->
 <div class="w3-main" style="margin-left:50px">
-  <!-- Push down content on small screens -->
-  <div class="w3-hide-large" style="margin-top:83px"></div>
-  <!-- About section -->
-  <div class="w3-content w3-black w3-border-right w3-border-red" style="max-width:700px; " id="secondLook">
-    <div class="header">
-      <h2 class="header"> Why is Bojack Horseman just not that good the first time around?  </h2>
-    </div>
-    <img id="chapOne" src="../other/images/bj_sneezing.jpg">
+  <div class="w3-hide-large" style="margin-top:83px">
+  </div> <!-- Push down content on small screens -->
 
-    <blockquote>
-      <p>&emsp;The Bojack Horseman Story starts in what literature often calls in medias res, or
-      "in the middle of things". We are not introduced to Bojack. There is no shaded lens of
-      his childhood or personal relationships for us to understand him through. We just get him- for what
-       he is- and it's not looking good.</p>
-
-      <p>&emsp;Unlike many of the main characters in TV shows, Bojack isn't particularly captivating.
-      He isn't a high school teacher who gets wrapped up in selling meth to support his family, nor is he
-       out to avenge his long-lost father. He just seems to sit around the house and fall through on most,
-       if not all, of his responsibilities- not even in a way that helps develop his character as a quirky
-      messy klutz or a loudly bored cynic. Everything about his melancholy defensive sedated state seems
-      very genuine and private, much like of that in our real lives.</p>
-
-      <p>&emsp;And through the first time watching the Bojack series, this sentiment doesn't really change.
-      Sure, we learn more about Bojack, his dilemmas and the people standing within the damage-radius.
-      But with all the new random storylines, events and character episodes, we are less able to digest
-      the true beauty and connectability of the show. It is not until end, when you have finally left
-      medias res, that you can start to enjoy the show in a different light. Bojack Horseman is a funny,
-      stubborn and all-too-true show that connects to some of humanity's most darkest and hilarious
-      tendencies. Watching Bojack a second time does and means something different to each person that
-      watches it. Therefore, I cannot tell you which glorious revelation that you'll experience from watching
-      it again, but what I can tell you is that it'll surely be a different story that you see.</p>
-      <footer>Note: This is a rhetorical article. Horseman is actually pretty good the first time around. It's just worth a second watch.</footer>
-
-    </blockquote>
-
-
-  </div>
-
-<!-- Chapter One Story
-      <div class="w3-content w3-black w3-border-right w3-border-red" style="max-width:700px; " id="episodeOne">
-        <div class="header">
-          <h2 class="header"> The Bojack Horseman Story, Chapter One </h2>
+      <!-- The Page: Article -->
+      <div class="w3-content w3-black w3-border-right w3-border-red" style="max-width:700px; " id="secondLookArticle">
+        <!-- Title section -->
+        <div class="titularSections">
+          <h2 class="titularSections"> Why is Bojack Horseman just not that good the first time around?  </h2>
         </div>
-        <h1 class="intro">So...</h1>
-        <video controls id="chapOne">
+        <!-- Photo -->
+        <img  src="../other/images/bj_sneezing.jpg">
+        <!-- The artice -->
+        <blockquote>
+          <p>&emsp;The Bojack Horseman Story starts in what literature often calls in medias res, or
+          "in the middle of things". We are not soHeaderduced to Bojack. There is no shaded lens of
+          his childhood or personal relationships for us to understand him through. We just get him- for what
+           he is- and it's not looking good.</p>
+
+          <p>&emsp;Unlike many of the main characters in TV shows, Bojack isn't particularly captivating.
+          He isn't a high school teacher who gets wrapped up in selling meth to support his family, nor is he
+           out to avenge his long-lost father. He just seems to sit around the house and fall through on most,
+           if not all, of his responsibilities- not even in a way that helps develop his character as a quirky
+          messy klutz or a loudly bored cynic. Everything about his melancholy defensive sedated state seems
+          very genuine and private, much like of that in our real lives.</p>
+
+          <p>&emsp;And through the first time watching the Bojack series, this sentiment doesn't really change.
+          Sure, we learn more about Bojack, his dilemmas and the people standing within the damage-radius.
+          But with all the new random storylines, events and character episodes, we are less able to digest
+          the true beauty and connectability of the show. It is not until end, when you have finally left
+          medias res, that you can start to enjoy the show in a different light. Bojack Horseman is a funny,
+          stubborn and all-too-true show that connects to some of humanity's most darkest and hilarious
+          tendencies. Watching Bojack a second time does and means something different to each person that
+          watches it. Therefore, I cannot tell you which glorious revelation that you'll experience from watching
+          it again, but what I can tell you is that it'll surely be a different story that you see.</p>
+          <footer>Note: This is a rhetorical article. Horseman is actually pretty good the first time around. It's just worth a second watch.</footer>
+          </blockquote>
+      </div>
+
+      <!-- The Page: Chapter One Story -->
+      <div class="w3-content w3-black w3-border-right w3-border-red" style="max-width:700px; " id="episodeOneArticle">
+        <div class="titularSections">
+          <h2 class="titularSections"> The Bojack Horseman Story, Chapter One </h2>
+        </div>
+        <h1 class="soHeader">So...</h1>
+        <video controls >
           <source src="../other/images/bj_chapOne.mp4" type="video/mp4">
           Your browser does not support HTML5 video.
         </video>
-
         <blockquote>
           <p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works.</p>
 
@@ -246,100 +202,100 @@
           <p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works.</p>
           <footer>From WWF's website</footer>
         </blockquote>
-
-
       </div>
--->
-      <div class="w3-content w3-black w3-border-right w3-border-red"  style="max-width:700px; " id="artArticle">
-        <div class="header">
-          <h2 class="header"> Art Gallery </h2>
+
+      <!-- The Page: Art Gallery -->
+      <div class="w3-content w3-black w3-border-right w3-border-red"  style="max-width:700px" id="artArticleImagesArticle">
+        <!-- Title -->
+        <div class="titularSections">
+          <h2 class="titularSections"> Art Gallery </h2>
         </div>
-          <img id="artGallery" src="../other/images/bj_art/warm_cold.jpg">
-          <img id="artGallery" src="../other/images/bj_art/across_horizon.jpg">
-          <img id="artGallery" src="../other/images/bj_art/dark_potrait.jpg">
-          <img id="artGallery" src="../other/images/bj_art/underwater.jpg">
-          <img id="artGallery" src="../other/images/bj_art/family_potrait.png">
-          <img id="artGallery" src="../other/images/bj_art/faceless_potrait.jpg">
-          <img id="artGallery" src="../other/images/bj_art/friends_potrait.jpg">
-          <img id="artGallery" src="../other/images/bj_art/brownBag.jpg">
-
-
+        <!-- Photo Line-up -->
+          <img id="artArticleImages" src="../other/images/bj_art/warm_cold.jpg">
+          <img id="artArticleImages" src="../other/images/bj_art/across_horizon.jpg">
+          <img id="artArticleImages" src="../other/images/bj_art/dark_potrait.jpg">
+          <img id="artArticleImages" src="../other/images/bj_art/underwater.jpg">
+          <img id="artArticleImages" src="../other/images/bj_art/family_potrait.png">
+          <img id="artArticleImages" src="../other/images/bj_art/faceless_potrait.jpg">
+          <img id="artArticleImages" src="../other/images/bj_art/friends_potrait.jpg">
+          <img id="artArticleImages" src="../other/images/bj_art/brownBag.jpg">
       </div>
 
-  <!-- Footer -->
-  <footer class="w3-container w3-padding-32 w3-grey" style="margin-left: 150px">
-    <div class="w3-row-padding">
-      <div class="w3-third">
-        <h3>INFO</h3>
-        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      </div>
+      <!-- Footer -->
+      <footer class="w3-container w3-padding-32 w3-grey" style="margin-left: 150px">
+        <div class="w3-row-padding">
+          <div class="w3-third">
+            <h3>INFO</h3>
+            <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+          </div>
 
-      <div class="w3-third">
-        <h3>BLOG POSTS</h3>
-        <ul class="w3-ul">
-          <li class="w3-padding-16 w3-hover-black">
-            <img src="/w3images/workshop.jpg" class="w3-left w3-margin-right" style="width:50px">
-            <span class="w3-large">Lorem</span><br>
-            <span>Sed mattis nunc</span>
-          </li>
-          <li class="w3-padding-16 w3-hover-black">
-            <img src="/w3images/gondol.jpg" class="w3-left w3-margin-right" style="width:50px">
-            <span class="w3-large">Ipsum</span><br>
-            <span>Praes tinci sed</span>
-          </li>
-        </ul>
-      </div>
+          <div class="w3-third">
+            <h3>BLOG POSTS</h3>
+            <ul class="w3-ul">
+              <li class="w3-padding-16 w3-hover-black">
+                <img src="/w3images/workshop.jpg" class="w3-left w3-margin-right" style="width:50px">
+                <span class="w3-large">Lorem</span><br>
+                <span>Sed mattis nunc</span>
+              </li>
+              <li class="w3-padding-16 w3-hover-black">
+                <img src="/w3images/gondol.jpg" class="w3-left w3-margin-right" style="width:50px">
+                <span class="w3-large">Ipsum</span><br>
+                <span>Praes tinci sed</span>
+              </li>
+            </ul>
+          </div>
 
-      <div class="w3-third">
-        <h3>POPULAR TAGS</h3>
-        <p>
-          <span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">London</span>
-          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">IKEA</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">NORWAY</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">DIY</span>
-          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Baby</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Family</span>
-          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">News</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Clothing</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Shopping</span>
-          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Sports</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Games</span>
-        </p>
-      </div>
-    </div>
-  </footer>
+          <div class="w3-third">
+            <h3>POPULAR TAGS</h3>
+            <p>
+              <span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">London</span>
+              <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">IKEA</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">NORWAY</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">DIY</span>
+              <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Baby</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Family</span>
+              <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">News</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Clothing</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Shopping</span>
+              <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Sports</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Games</span>
+            </p>
+          </div>
+        </div>
+      </footer>
 
-  <div class="w3-black w3-center w3-padding-24" style="margin-left: 150px">Powered by <a href="../other/videoHtmls/evilCorp.html" style="color:red; text-decoration: none"  title="W3.CSS" target="_blank" class="w3-hover-opacity">E CORP</a></div>
+      <!-- E Corp message -->
+      <div class="w3-black w3-center w3-padding-24" style="margin-left: 150px">Powered by <a href="../other/videoHtmls/evilCorp.html" style="color:red; text-decoration: none"  title="W3.CSS" target="_blank" class="w3-hover-opacity">E CORP</a></div>
 
-<!-- End page content -->
-</div>
+</div> <!-- End page content -->
 
 <script>
-// Script to open and close sidebar
-function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
-}
+  // Script to open and close sidebar
+  function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+      document.getElementById("myOverlay").style.display = "block";
+  }
 
-function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
-}
+  function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+      document.getElementById("myOverlay").style.display = "none";
+  }
 
-function openCity(evt, cityName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("w3-content w3-black w3-border-right w3-border-red");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
+  // Change pages via tab clicks
+  function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("w3-content w3-black w3-border-right w3-border-red");
+      for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+  }
 
-function goBack() {
-    window.history.back();
-}
+  function goBack() {
+      window.history.back();
+  }
 
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
+  // Open the page with this id tag
+  document.getElementById("defaultOpen").click();
 
 </script>
 

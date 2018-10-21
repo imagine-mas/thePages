@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dark Pages</title>
+  <link rel="shortcut icon" type="image/jpg" href="../other/images/black_sq_x.jpg">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<style>
+  body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+
+  /* width */
+  ::-webkit-scrollbar {
+      width: 10px;
+      height: 4px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+      background: black;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+      background: #267699;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+  }
+
+  button {
+     background:inherit;
+     border:none;
+     padding-bottom:5px;
+     font-size: 18px;
+     cursor: pointer;
+     outline: none;
+     width: 100%;
+  }
+
+
+  .intro{ /* The So header*/
+    color: white;
+
+    font-size: 22px;
+    font-family: sans-serif;
+    margin-left: 80px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  #smile {
+    font-size:300px;
+    margin-left: 35%;
+    color:#fff021;
+    text-shadow: 3px 3px 10px grey;
+  }
+
+  #episodeOne{ /* the article div */
+    max-width:700px;
+    margin-top:0px;
+    padding-top:15px;
+    box-shadow: 0px 24px 28px 0px rgba(200, 200, 200, 0.2), 0px -26px 40px 0px rgba(200, 200, 200, 0.19);
+  }
+
+  #episodeTwo{ /* the article div */
+    max-width:700px;
+    margin-top:0px;
+    padding-top:15px;
+    box-shadow: 0px 24px 28px 0px rgba(200, 200, 200, 0.2), 0px -26px 40px 0px rgba(200, 200, 200, 0.19);
+  }
+
+  .header{
+    background: #E5E7E9;
+    width: 97%;
+    color: black;
+    font-size: 22px;
+    font-family: sans-serif;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 10px;
+  }
+
+  video{
+    width: 60%;
+    margin-left:20%;
+    margin-right:20%;
+    margin-top:3%;
+    margin-bottom: 3%;
+  }
+
+  .drop {
+    animation: drop 0.15s cubic-bezier(1,1,1,1) forwards;
+  }
+
+  @keyframes drop {
+    0% {
+      transform-origin: center;
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 80;
+      transform:
+        translate3d(0, 350px, 500px)
+        rotate3d(0, 0,
+
+           1, 10deg);
+    }
+  }
+
+  h3{
+    padding-top: 0px;
+    padding-bottom: 15px;
+    padding-left: 8px;
+  }
+
+</style>
+
+<body class="w3-content" style="max-width:1600px; background-color: #0f0f0f;">
+
+<!-- Not relevant material -->
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-animate-left w3-text-grey w3-collapse w3-top" style="z-index:3;width:150px;font-weight:bold; background-color: #0f0f0f;" id="mySidebar">
+  <h3 onclick="goBack()" class="w3-left-align"><b>The Dark Pages</b></h3>
+  <button class="tablinks" onclick="openCity(event, 'episodeOne')" class="w3-bar-item w3-text-grey w3-button w3-right-align" >Coming Soon</button><br>
+  <button class="tablinks" onclick="openCity(event, 'episodeOne')" class="w3-bar-item w3-text-grey w3-button w3-right-align" id="defaultOpen">Coming Soon</button><br>
+  <button class="tablinks" onclick="window.location.href='bm_blog.html'" class="w3-bar-item w3-text-grey w3-button w3-right-align" >Coming Soon</button><br>
+</nav>
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-black w3-xlarge w3-padding-16">
+  <span class="w3-left-align w3-padding" style="color: white">Dark Pages</span>
+  <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+</header>
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Relevant material -->
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:50px">
+  <div class="w3-hide-large" style="margin-top:83px"></div> <!-- Push down content on small screens -->
+
+  <!-- The Page: Content in progress -->
+  <div class="w3-content w3-black w3-border-right w3-border-blue" style="max-width:700px;" id="episodeOne">
+    <!-- Title Section -->
+    <div class="header">
+      <h2 class="header"> Black Mirror </h2>
+    </div>
+      <!-- The Article Section -->
+    <blockquote style="padding-bottom:600px">
+      <p style="padding-top:100px">This part of the site is currently under construction. Thank you.</p>
+    </blockquote>
+  </div>
+
+  <!-- The Page: Hidden -->
+  <div class="w3-content w3-black w3-border-right w3-border-blue"  style="max-width:700px; " id="episodeTwo">
+    <!-- Title -->
+    <div class="header">
+      <h2 class="header"> Episode 2 </h2>
+    </div>
+    <h1 class="intro">So...</h1>
+    <!-- Article -->
+    <blockquote>
+        <p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works.</p>
+        <footer>From WWF's website</footer>
+      </blockquote>
+      <blockquote>
+        <p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works.</p>
+        <footer>From WWF's website</footer>
+      </blockquote>
+      <blockquote>
+        <p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works.</p>
+        <footer>From WWF's website</footer>
+      </blockquote>
+      <blockquote>
+        <p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works.</p>
+        <footer>From WWF's website</footer>
+      </blockquote>
+      <blockquote>
+        <p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works.</p>
+        <footer>From WWF's website</footer>
+    </blockquote>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-grey" style="margin-left: 150px">
+    <div class="w3-row-padding">
+      <div class="w3-third">
+        <h3>INFO</h3>
+        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+      </div>
+
+      <div class="w3-third">
+        <h3>BLOG POSTS</h3>
+        <ul class="w3-ul">
+          <li class="w3-padding-16 w3-hover-black">
+            <img src="/w3images/workshop.jpg" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Lorem</span><br>
+            <span>Sed mattis nunc</span>
+          </li>
+          <li class="w3-padding-16 w3-hover-black">
+            <img src="/w3images/gondol.jpg" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Ipsum</span><br>
+            <span>Praes tinci sed</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="w3-third">
+        <h3>POPULAR TAGS</h3>
+        <p>
+          <span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">London</span>
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">IKEA</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">NORWAY</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">DIY</span>
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Baby</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Family</span>
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">News</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Clothing</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Shopping</span>
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Sports</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Games</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!-- E Corp Label -->
+  <div class="w3-black w3-center w3-padding-24" style="margin-left: 150px">Powered by <a href="../other/videoHtmls/evilCorp.html" style="color:red; text-decoration: none"  title="W3.CSS" target="_blank" class="w3-hover-opacity">E CORP</a></div>
+
+</div> <!-- End page content -->
+
+<script>
+  // Script to open and close sidebar
+  function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+      document.getElementById("myOverlay").style.display = "block";
+  }
+
+  function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+      document.getElementById("myOverlay").style.display = "none";
+  }
+
+  // Change page viewage
+  function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("w3-content w3-black w3-border-right w3-border-blue");
+      for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+  }
+
+  function goBack() {
+      window.history.back();
+  }
+
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+
+</script>
+
+</body>
+</html>
